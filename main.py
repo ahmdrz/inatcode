@@ -18,7 +18,7 @@ endno = 999999
 state = int(state)
 
 for i in range(startno,endno):
-    result = 127 * 1000000
+    result = state * 1000000
     result += i
     temp = result
     control = 0
@@ -31,5 +31,6 @@ for i in range(startno,endno):
     if mod < 2:
         result = result * 10 + mod
     else:
-        result = result * 10 + ( 11 - mod )    
-    fi.write(str(result) + "\n")
+        result = result * 10 + ( 11 - mod )
+
+    fi.write(('0' * (10-len(str(result)))) + str(result) + "\n")
