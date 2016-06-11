@@ -1,5 +1,5 @@
 # inatcode
-### Iranian National Code dictionary maker.
+### Iranian National Code dictionary generator.
 
 #### How to use.
 ````
