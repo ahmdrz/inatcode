@@ -32,5 +32,16 @@ for i in range(startno,endno):
         result = result * 10 + mod
     else:
         result = result * 10 + ( 11 - mod )
-
-    fi.write(('0' * (10-len(str(result)))) + str(result) + "\n")
+    
+    output = ('0' * (10-len(str(result)))) + str(result)
+    flag = False
+    
+    for j in range(1,10):
+        temp = str(j) * 10
+        if (output == temp):
+            print output
+            flag = True
+            break
+    
+    if (flag == False):
+        fi.write(output + "\n")
